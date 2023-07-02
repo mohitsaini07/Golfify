@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+    color: white;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+}
+
+.nav img {
+    margin-left: 5rem;
+}
+
+ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0 3rem;
+}
+
+ul li {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cursor {
+    position: fixed;
+    height: 300px;
+    width: 300px;
+    background: #96c11e51;
+    border-radius: 50%;
+    z-index: 10;
+    filter: blur(60px);
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -100;
+}
+
+.main {
+    position: relative;
+    background: rgba(6, 6, 6, 0.4);
+}
+
+.page1 {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page1 h1 {
+    font-family: 'poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 6rem;
+    /* text-shadow: 0px 5px 10px black; */
+    position: relative;
+}
+
+.page1 h1::before {
+    content: "EAT. DRINK. PLAY";
+    position: absolute;
+    color: #000;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 1px #95c11e;
+    z-index: -1;
+}
+
+.page1 h2 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.page1 p {
+    font-size: 1rem;
+    font-weight: 200;
+    width: 500px;
+    text-align: center;
+}
+
+.page2 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.scroller {
+    white-space: nowrap;
+    position: relative;
+    z-index: 10;
+}
+
+.infinite_scroller {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+}
+
+.infinite_scroller h3 {
+    font-family: 'poppins', sans-serif;
+    margin-left: 2rem;
+    color: transparent;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: inline-block;
+    font-size: 6rem;
+    -webkit-text-stroke: 1px #95c11e;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.infinite_scroller h3:hover {
+    color: #95c11e;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0 5rem;
+    height: 40vh;
+}
+
+.about img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.about_content {
+    width: 50vw;
+}
+
+.about h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.about p {
+    font-weight: 100;
+}
+
+.card_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: rgb(25, 27, 25);
+    margin: 2rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+    z-index: 10;
+}
+
+.card_1 {
+    background-image: url(assets/card1.avif);
+    background-position: center;
+    background-size: cover;
+}
+
+.card_2 {
+    background-image: url(assets/card2.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.card_3 {
+    background-image: url(assets/card3.avif);
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    padding: 6rem 1rem;
+    background: #96c11eef;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.overlay h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.overlay p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #000;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.green_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    background: linear-gradient(to right top, #95c11e, #69c710fe);
+    overflow: hidden;
+    margin-top: 3rem;
+}
+
+.green_div img {
+    width: 250px;
+    height: 500px;
+}
+
+.green_div h3 {
+    color: #000;
+}
+
+.page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.page3 img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 3rem;
+}
+
+.page3 .content {
+    width: 50%;
+}
+
+.page3 .content h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.page3 .content p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.page3 .content button {
+    padding: 0.8rem 1rem;
+    border: 1px solid #95c11e;
+    background: transparent;
+}
+
+.page4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 10rem;
+}
+
+.page4 h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    width: 70%;
+}
+
+.page4 img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.page4 .quote_1 {
+    left: 12rem;
+    top: 2rem;
+}
+
+.page4 .quote_2 {
+    right: 14rem;
+    bottom: 2rem;
+}
+
+.page5 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    position: relative;
+}
+
+.long_cards {
+    height: 150px;
+    width: 400px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+
+.long_cards h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    color: #000;
+    background: #95c11e;
+    font-size: 2rem;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.long_cards:hover h2 {
+    color: #fff;
+    background: transparent;
+}
+
+.long_cards img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bg_text {
+    position: absolute;
+    top: -30%;
+    font-weight: 800;
+    font-size: 5.5rem;
+    color: #000000;
+    -webkit-text-stroke: 1px #fefff9;
+}
+
+.footer {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right top, #95c11e, #54c11e);
+    overflow: hidden;
+}
+
+.footer div {
+    width: 20%;
+}
+
+.footer .icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer .icons i {
+    font-size: 2rem;
+}
+
+.footer div img {
+    width: 100px;
+}
+
+.footer div h3 {
+    color: #000;
+}
+
+.footer div h4 {
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.footer div .highlighted{
+    font-weight: 800;
+}
